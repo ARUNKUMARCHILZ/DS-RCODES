@@ -1,0 +1,25 @@
+airquality<-datasets::airquality
+head(airquality,10)
+tail(airquality,10)
+summary(airquality$Month)
+df<-airquality[,-6]
+plot(airquality$Wind)
+plot(airquality$Temp,airquality$Wind,type="p")
+plot(airquality)
+plot(airquality$Wind,type = "b")
+plot(airquality$Wind,xlab='ozone concentration',ylab = 'no of instances',main='ozone levels in ny city',col='blue')
+hist(airquality$Temp)  
+hist(airquality$Temp,main ='solar radiation values in air',xlab = 'solar rad.',col='blue')
+boxplot(airquality$Wind,main="Boxplot")
+boxplot.stats(airquality$Wind)$out
+boxplot(airquality[,1:4],main='multiple')
+par(mfrow=c(3,3),mar=c(2,5,2,1),las=0,bty="o")
+plot(airquality$Ozone)
+plot(airquality$Ozone,airquality$Wind)
+plot(airquality$Ozone,type="l")
+barplot(airquality$Ozone,main = 'ozone concentration in air',xlab = 'ozone levels',col='green',horiz=TRUE)
+hist(airquality$Solar.R)
+head(airquality,10)
+tail(airquality,10)
+airquality$Temp
+summary(airquality$Ozone)
